@@ -16,6 +16,14 @@ public final class LedgerInvariantChecker {
             var target = p.side() == DebitCredit.DEBIT ? debits : credits;
             target.merge(p.amount().asset(), p.amount().decimalValue(), BigDecimal::add);
         }
-        if (!debits.equals(credits)) throw new IllegalArgumentException("journal entry is not balanced: debits=" + debits + " credits=" + credits);
+        if (!sameNumericTotals(debits, credits)) throw new IllegalArgumentException("journal entry is not balanced: debits=" + debits + " credits=" + credits);
+    }
+
+    private static boolean sameNumericTotals(Map<AssetId, BigDecimal> debits, Map<AssetId, BigDecimal> credits) {
+        if (!debits.keySet().equals(credits.keySet())) return false;
+        for (AssetId asset : debits.keySet()) {
+            if (debits.get(asset).compareTo(credits.get(asset)) != 0) return false;
+        }
+        return true;
     }
 }

@@ -7,7 +7,6 @@
 ## Pending
 
 - [ ] Add JDBC/PostgreSQL adapters after storage semantics are finalized.
-- [ ] Add deeper property-based tests.
 
 ## Completed
 
@@ -28,3 +27,4 @@
 - [x] Add documentation pages (principles, money representation, ledger, idempotency, workflows, webhooks, reconciliation, compliance boundaries, domain tradeoffs).
 - [x] Add README.md with package map, quick start, and license link.
 - [x] Add docs/index.md with reading order and topic index.
+- [x] Add deeper property-based tests for money, ledger, idempotency, workflow resume, serialization, and reconciliation invariants.
