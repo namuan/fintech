@@ -1,0 +1,2 @@
+package com.github.namuan.fintech.webhooks;
+public final class WebhookIngestionService { private final RawWebhookStore store; private final WebhookSignatureVerifier verifier; public WebhookIngestionService(RawWebhookStore store, WebhookSignatureVerifier verifier){this.store=store;this.verifier=verifier;} public void ingest(WebhookEnvelope envelope){ if(!verifier.verify(envelope)) throw new SecurityException("invalid webhook signature"); store.append(envelope); } }
