@@ -62,5 +62,4 @@ For a complete list of packages and types, see the [package map in the README](.
 
 ## Source files
 
-- [TODO.md](../TODO.md) — implementation status and remaining work
 - [Fintech Engineering Handbook](https://w.pitula.me/fintech-engineering-handbook/) — the handbook that inspired this library

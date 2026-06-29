@@ -8,6 +8,16 @@ Built from the patterns described in the [Fintech Engineering Handbook](https://
 
 **Requirements:** Java 21+, Maven
 
+This proof-of-concept is not published to Maven Central. To use it from another local Maven project, first install it into your local Maven repository:
+
+```bash
+git clone https://github.com/namuan/fintech-poc.git
+cd fintech-poc
+mvn clean install
+```
+
+Then depend on the locally installed artifact:
+
 ```xml
 <dependency>
     <groupId>com.github.namuan</groupId>
@@ -15,6 +25,8 @@ Built from the patterns described in the [Fintech Engineering Handbook](https://
     <version>0.1.0-SNAPSHOT</version>
 </dependency>
 ```
+
+Alternatively, copy the source into a multi-module build and add this project as a module dependency.
 
 ```java
 import com.github.namuan.fintech.currency.FiatCurrency;
@@ -124,9 +136,7 @@ mvn compile
 
 ## Implementation status
 
-The library implements the first‑pass skeleton of all planned packages. Stores are in‑memory (`InMemoryLedgerStore`, `InMemoryIdempotencyStore`, etc.) suitable for tests and single‑node services. JDBC/PostgreSQL adapters and deeper property‑based tests are planned as next steps.
-
-See [TODO.md](TODO.md) for the full status.
+The library implements the first‑pass skeleton of all planned packages. Stores include in‑memory implementations (`InMemoryLedgerStore`, `InMemoryIdempotencyStore`, etc.) suitable for tests and single‑node services, plus first-pass JDBC/PostgreSQL adapters under `storage.jdbc` with schema in `src/main/resources/db/postgresql/schema.sql`.
 
 ## Acknowledgements
 
