@@ -105,6 +105,7 @@ Start with the [documentation index](docs/index.md), or jump directly to a topic
 | [Ledger](docs/ledger.md) | Double‑entry bookkeeping, postings, corrections, and reversals |
 | [Idempotency](docs/idempotency.md) | Surviving retries without double‑counting |
 | [Workflows](docs/workflows.md) | Durable multi‑step money flows |
+| [Storage semantics](docs/storage-semantics.md) | Durable-store contracts and PostgreSQL adapter requirements |
 | [Webhooks](docs/webhooks.md) | Safely ingesting signals from the outside world |
 | [Reconciliation](docs/reconciliation.md) | Detecting and resolving data drift across systems |
 | [Compliance boundaries](docs/compliance-boundaries.md) | PII separation, retention, and jurisdiction awareness |

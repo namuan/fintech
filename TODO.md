@@ -28,3 +28,4 @@
 - [x] Add README.md with package map, quick start, and license link.
 - [x] Add docs/index.md with reading order and topic index.
 - [x] Add deeper property-based tests for money, ledger, idempotency, workflow resume, serialization, and reconciliation invariants.
+- [x] Add storage semantics documentation for durable JDBC/PostgreSQL adapter design.

@@ -11,10 +11,11 @@ If you are new to financial software engineering, read in this order:
 3. **[Ledger](ledger.md)** — double‑entry bookkeeping: how money moves between accounts and how corrections work.
 4. **[Idempotency](idempotency.md)** — why every operation that touches money must survive retries.
 5. **[Workflows](workflows.md)** — durable multi‑step money flows that survive crashes between steps.
-6. **[Webhooks](webhooks.md)** — how to safely ingest signals from payment providers, banks, and custodians.
-7. **[Reconciliation](reconciliation.md)** — the safety net that catches data drift between systems.
-8. **[Compliance boundaries](compliance-boundaries.md)** — separating PII from financial data, retention, access controls, and maker‑checker.
-9. **[Domain tradeoffs](domain-tradeoffs.md)** — a guide to choosing the right types and patterns for banking, payments, crypto, FX, trading, HFT, quant, and compliance.
+6. **[Storage semantics](storage-semantics.md)** — the durable-store contracts required before JDBC/PostgreSQL adapters.
+7. **[Webhooks](webhooks.md)** — how to safely ingest signals from payment providers, banks, and custodians.
+8. **[Reconciliation](reconciliation.md)** — the safety net that catches data drift between systems.
+9. **[Compliance boundaries](compliance-boundaries.md)** — separating PII from financial data, retention, access controls, and maker‑checker.
+10. **[Domain tradeoffs](domain-tradeoffs.md)** — a guide to choosing the right types and patterns for banking, payments, crypto, FX, trading, HFT, quant, and compliance.
 
 If you are experienced in one fintech domain and want to understand how the library handles a different one, start with **[Domain tradeoffs](domain-tradeoffs.md)**.
 
@@ -39,6 +40,7 @@ If you are experienced in one fintech domain and want to understand how the libr
 | Page | What it covers |
 |---|---|
 | [Idempotency](idempotency.md) | `IdempotencyBarrier`, keys, scopes, replay semantics, payload validation |
+| [Storage semantics](storage-semantics.md) | Durable adapter contracts, transaction boundaries, isolation, append-only tables, and PostgreSQL patterns |
 | [Webhooks](webhooks.md) | Raw payload persistence, signature verification, deduplication, hint‑based processing |
 | [Reconciliation](reconciliation.md) | Comparing ledger vs provider vs bank vs chain, exact and heuristic matching, one‑to‑many settlement matching |
 
