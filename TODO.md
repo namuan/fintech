@@ -29,3 +29,4 @@
 - [x] Add docs/index.md with reading order and topic index.
 - [x] Add deeper property-based tests for money, ledger, idempotency, workflow resume, serialization, and reconciliation invariants.
 - [x] Add storage semantics documentation for durable JDBC/PostgreSQL adapter design.
+- [x] Add reusable storage contract tests for ledger, idempotency, reservations, workflows, webhooks, outbox, consumer deduplication, and audit stores.

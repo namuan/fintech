@@ -1,3 +1,3 @@
 package com.github.namuan.fintech.outbox;
 import java.util.*; import java.util.concurrent.ConcurrentHashMap;
-public final class InMemoryOutboxStore implements OutboxStore { private final Map<PublishedEventId,OutboxEvent> pending = new ConcurrentHashMap<>(); public void append(OutboxEvent e){pending.put(e.id(),e);} public List<OutboxEvent> pending(){return List.copyOf(pending.values());} public void markPublished(PublishedEventId id){pending.remove(id);} }
+public final class InMemoryOutboxStore implements OutboxStore { private final Map<PublishedEventId,OutboxEvent> pending = new ConcurrentHashMap<>(); public void append(OutboxEvent e){ OutboxEvent previous = pending.putIfAbsent(e.id(),e); if (previous != null && !previous.equals(e)) throw new IllegalArgumentException("Outbox event already exists: " + e.id().value()); } public List<OutboxEvent> pending(){return List.copyOf(pending.values());} public void markPublished(PublishedEventId id){pending.remove(id);} }
