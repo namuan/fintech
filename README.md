@@ -85,6 +85,7 @@ System.out.println(ledger.balance(user).decimalValue()); // 100.00
 | `crypto` | `CryptoWithdrawalFlow`, `OnChainTransaction`, `ConfirmationPolicy`, `ReorgRiskPolicy`, `NetworkFeeEstimate` |
 | `trading` | `Order`, `Fill`, `Execution`, `Position`, `Instrument`, `TickSize`, `MarketDataAmount` |
 | `quant` | `ApproximateAmount`, `ApproximationPolicy`, `RiskMetric`, `ValuationResult`, `Tolerance` |
+| `storage.jdbc` | JDBC/PostgreSQL adapters for ledger, idempotency, reservations, workflows, webhooks, outbox, consumer deduplication, and audit stores |
 
 ## Non‑goals
 

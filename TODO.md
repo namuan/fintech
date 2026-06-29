@@ -6,7 +6,7 @@
 
 ## Pending
 
-- [ ] Add JDBC/PostgreSQL adapters after storage semantics are finalized.
+- None.
 
 ## Completed
 
@@ -30,3 +30,4 @@
 - [x] Add deeper property-based tests for money, ledger, idempotency, workflow resume, serialization, and reconciliation invariants.
 - [x] Add storage semantics documentation for durable JDBC/PostgreSQL adapter design.
 - [x] Add reusable storage contract tests for ledger, idempotency, reservations, workflows, webhooks, outbox, consumer deduplication, and audit stores.
+- [x] Add first-pass JDBC/PostgreSQL adapters and schema for durable stores.

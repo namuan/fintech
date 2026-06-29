@@ -6,6 +6,8 @@ The in-memory stores in this repository are deliberately small and useful for te
 
 This page defines the storage contract that production adapters must satisfy before `Add JDBC/PostgreSQL adapters after storage semantics are finalized` can safely begin.
 
+The repository now includes first-pass JDBC/PostgreSQL adapters under `com.github.namuan.fintech.storage.jdbc` and a PostgreSQL schema at `db/postgresql/schema.sql`. These adapters implement the store interfaces directly with `javax.sql.DataSource`; callers remain responsible for applying the schema and choosing transaction boundaries for larger cross-store units of work.
+
 ## Global adapter requirements
 
 All durable adapters should follow these rules:
